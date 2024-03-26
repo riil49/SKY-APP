@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication"
+        tools:targetApi="31">
+        <activity
+            android:name=".contact"
+            android:exported="false" />
+        <activity
+            android:name=".detailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Nubulas"
+            android:exported="false" />
+        <activity
+            android:name=".Natural_phenomena1"
+            android:exported="false" />
+        <activity
+            android:name=".Nubulas1"
+            android:exported="false" />
+        <activity
+            android:name=".Natural_phenomena"
+            android:exported="false" />
+        <activity
+            android:name=".Stars1"
+            android:exported="false" />
+        <activity
+            android:name=".STARS"
+            android:exported="false" />
+        <activity
+            android:name=".ITEMS3"
+            android:exported="false" />
+        <activity
+            android:name=".hoooommme"
+            android:exported="false" />
+        <activity
+            android:name=".NGC6302Activity"
+            android:exported="false" />
+        <activity
+            android:name=".MeteorsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MeteoriteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AuroraBorealisActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DarkNebulaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OrionNebulaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DumbbellNebulaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AlcyoneActivity"
+            android:exported="false" />
+        <activity
+            android:name=".vegaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".alphacentauriActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OrionsBeltActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NeptuneActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UranusActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SaturnActivity"
+            android:exported="false" />
+        <activity
+            android:name=".JupiterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MarsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EarthActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VenusActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MercuryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".contactus_KhadijaActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".contactus_rehamActivity"
+            android:exported="false" />
+        <activity
+            android:name=".contactusActivity"
+            android:exported="false" />
+        <activity
+            android:name=".homeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PlanetsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".IntroActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

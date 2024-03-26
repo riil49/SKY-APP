@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".hoooommme">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:backgroundTint="@color/grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/menu_bottom_navigation" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/main_background"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/space">
+
+
+            <ImageView
+                android:id="@+id/imageHeader"
+                android:layout_width="match_parent"
+                android:layout_height="410dp"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:src="@drawable/space"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/colorSemiDark"
+                app:layout_constraintBottom_toBottomOf="@id/imageHeader"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageMenu"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/menu_background"
+                android:contentDescription="@string/app_name"
+                android:padding="1dp"
+                android:src="@drawable/menu"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/colorPrimaryDark" />
+            <TextView
+                android:id="@+id/textHi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="SKY"
+                android:textColor="@color/white"
+                android:textSize="50sp"
+                android:textStyle="normal"
+                app:layout_constraintTop_toBottomOf="@id/imageMenu" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="200dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/btn_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="4dp"
+                app:layout_constraintTop_toBottomOf="@id/textHi">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/se" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="search..."
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textColorHint="@color/darkGrey"
+                    android:textSize="20sp"
+                    tools:ignore="Autofill" />
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/viewSupporter"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:layout_marginBottom="120dp"
+                app:layout_constraintBottom_toBottomOf="@id/imageHeader"
+                app:layout_constraintStart_toStartOf="parent" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardPlanets"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                app:cardBackgroundColor="@color/grey"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintEnd_toStartOf="@id/cardStars"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewSupporter">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="450dp"
+                        android:layout_height="140dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/img" />
+
+                    <Button
+                        android:id="@+id/buttonplanets"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#A9A9A9"
+                        android:text="Planets"
+                        android:textColor="@color/black"
+                        android:textSize="23sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardStars"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:cardBackgroundColor="@color/grey"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/cardPlanets"
+                app:layout_constraintTop_toBottomOf="@id/viewSupporter">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="25dp"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="600dp"
+                        android:layout_height="130dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/img_1" />
+
+                    <Button
+                        android:id="@+id/buttonStars"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#A9A9A9"
+                        android:text="Starts"
+                        android:textColor="@color/black"
+                        android:textSize="23sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardTest"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="30dp"
+                app:cardBackgroundColor="@color/grey"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/cardTest2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardPlanets">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    tools:ignore="UseCompoundDrawables">
+                    <ImageView
+                        android:layout_width="450dp"
+                        android:layout_height="140dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/img_2" />
+
+                    <Button
+                        android:id="@+id/buttonssddaa"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#A9A9A9"
+                        android:text="Nebulas"
+                        android:textColor="@color/black"
+                        android:textSize="23sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardTest2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="25dp"
+                app:cardBackgroundColor="@color/grey"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/cardTest"
+                app:layout_constraintTop_toBottomOf="@id/cardStars">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="118dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/img_3" />
+
+                    <Button
+                        android:id="@+id/buttonssdda"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#A9A9A9"
+                        android:text="Natural phenomena"
+                        android:textColor="@color/black"
+                        android:textSize="23sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
